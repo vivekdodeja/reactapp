@@ -6,4 +6,4 @@ before_install:
   - docker build -t vivekdodeja/reactapp -f Dockerfile.dev .
 
 script:
-  - docker run vivekdodeja/reactapp npm run test -- --coverage
+  - docker run -e CI=true vivekdodeja/reactapp npm run test -- --coverage
